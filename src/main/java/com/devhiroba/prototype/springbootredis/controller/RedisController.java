@@ -20,6 +20,11 @@ public class RedisController {
         this.userService = userService;
     }
 
+    @GetMapping({"/test"})
+    public String getTest() {
+        return "{\"result\":\"ok\"}";
+    }
+
     @GetMapping({"/users"})
     public ResponseEntity<?> getAllUsers() {
         List<String> users = userService.getUsernameList();
