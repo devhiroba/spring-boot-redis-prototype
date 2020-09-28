@@ -17,6 +17,8 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
 
+
+
 import java.time.Duration;
 
 @Configuration
@@ -50,8 +52,9 @@ public class RedisConfig {
     @Bean
     public RedisConnectionFactory redisConnectionFactory() {
         RedisClusterConfiguration config = new RedisClusterConfiguration();
-        //RedisStandaloneConfiguration config = new RedisStandaloneConfiguration();
         config.clusterNode(HOSTNAME, PORT);
+
+        //RedisStandaloneConfiguration config = new RedisStandaloneConfiguration();
         //config.setHostName(HOSTNAME);
         //config.setPort(PORT);
         //config.setDatabase(DATABASE);
