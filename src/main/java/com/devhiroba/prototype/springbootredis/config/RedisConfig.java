@@ -51,7 +51,7 @@ public class RedisConfig {
         RedisStandaloneConfiguration config = new RedisStandaloneConfiguration();
         config.setHostName(HOSTNAME);
         config.setPort(PORT);
-        config.setDatabase(DATABASE);
+        //config.setDatabase(DATABASE);
         //config.setPassword(PASSWORD);
 
         LettuceClientConfiguration clientConfig = LettuceClientConfiguration.builder()
